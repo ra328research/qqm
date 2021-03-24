@@ -7,12 +7,12 @@ check.packages <- function(pkg){
 }
 
 # Usage example
-packages<-c("tidyverse", "RCurl")
+packages<-c("tidyverse")
 check.packages(packages)     
 
        
         
-url <- getURL("https://raw.githubusercontent.com/ra328research/qqm/main/qqm_labreport_dataset.csv") 
+url <- url("https://raw.githubusercontent.com/ra328research/qqm/main/qqm_labreport_dataset.csv") 
 data <- read_csv(url)
         
         
