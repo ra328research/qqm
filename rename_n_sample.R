@@ -2,7 +2,9 @@
 if(!require(tidyverse)){
   install.packages("tidyverse")
 }
-     
+
+url <- "https://raw.githubusercontent.com/ra328research/qqm/main/qqm_labreport_dataset.csv"
+data <- read_csv(url) 
         
 
 # candidate number as seed
