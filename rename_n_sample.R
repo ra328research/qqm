@@ -33,3 +33,5 @@ names(data) <- data_names[,sample(ncol(data_names), 1)]
 #random subset of rows - between 7 and 9 smaller than the whole dataset
 data <- data[sample(c(1:nrow(data)), 
                     size = (nrow(data) - sample(7:9, 1))),]
+
+data
