@@ -1,13 +1,22 @@
-
-if(!require(c(tidyverse,RCurl))){
-  install.packages("tidyverse")
+        
+check.packages <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
 }
 
-library(tidyverse)
-library(RCurl)
+# Usage example
+packages<-c("tidyverse", "RCurl")
+check.packages(packages)     
 
+       
+        
 url <- getURL("https://raw.githubusercontent.com/ra328research/qqm/main/qqm_labreport_dataset.csv") 
 data <- read_csv(url)
+        
+        
+        
 
 # candidate number as seed
 RNGkind(sample.kind = "Rejection")
