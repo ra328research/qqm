@@ -1,11 +1,13 @@
 
-if(!require(tidyverse)){
+if(!require(c(tidyverse,RCurl))){
   install.packages("tidyverse")
 }
+
 library(tidyverse)
+library(RCurl)
 
-
-data <- read_csv("https://raw.githubusercontent.com/ra328research/qqm/main/qqm_labreport_dataset.csv") 
+url <- getURL("https://raw.githubusercontent.com/ra328research/qqm/main/qqm_labreport_dataset.csv") 
+data <- read_csv(url)
 
 # candidate number as seed
 RNGkind(sample.kind = "Rejection")
