@@ -1,4 +1,10 @@
 
+if(!require(tidyverse)){
+  install.packages("tidyverse")
+}
+library(tidyverse)
+
+
 data <- read_csv("https://raw.githubusercontent.com/ra328research/qqm/main/qqm_labreport_dataset.csv") 
 
 # candidate number as seed
