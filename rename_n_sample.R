@@ -30,8 +30,8 @@ data_names <- cbind(orig_names, UPPER_NAMES, dot.names, UPPER.DOT.NAMES, camelNa
 names(data) <- data_names[,sample(ncol(data_names), 1)]
 
 
-#random subset of rows - between 7 and 9 smaller than the whole dataset
+#random subset of rows - between 37 and 97 smaller than the whole dataset
 data <- data[sample(c(1:nrow(data)), 
-                    size = (nrow(data) - sample(7:9, 1))),]
+                    size = (nrow(data) - sample(37:97, 1))),]
 
 data
